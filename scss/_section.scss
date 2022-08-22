@@ -1,0 +1,70 @@
+section{
+    @include flex(column,center);
+    width: 100%;
+    padding: 50px;
+    h1{
+        text-align: center;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-family: $ff-fraunces;
+        color: $neutral-color-Grayish-blue;
+        margin: 40px;
+
+       
+    }
+    .clients{
+        @include flex(row,center);
+        padding: 40px 80px;
+
+        .client{
+            @include flex(column,space-around);
+            align-items: center;
+            margin: 20px;
+            
+
+            .emily{
+              @include background("../images/image-emily.jpg");
+                height: 80px;
+                width: 80px;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: all .5s ease;
+                
+            }
+            .emily:hover{
+                transform: scale(1.1);
+            }
+
+            .thomas{
+                @extend .emily;
+                @include background("../images/image-thomas.jpg");
+
+            }
+            .jennie{
+                @extend .emily;
+                @include background('../images/image-jennie.jpg');
+
+            }
+            p{
+                text-align: center;
+                font-family: $ff-barlow;
+                margin:20px 10px;
+                font-weight: 400;
+                line-height: 20px;
+                color: $neutral-color-Dark-grayish-blue;
+            }
+            h2{
+                font-family: $ff-fraunces;
+                font-size: 19px;
+                margin: 10px;
+            }
+            h3{
+                font-family: $ff-barlow;
+                color: $neutral-color-Grayish-blue;
+                font-size: 16px;
+
+            }
+        }
+    }
+ 
+}

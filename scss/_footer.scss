@@ -1,0 +1,61 @@
+footer{
+    background-color: $primary-color-Dark-moderate-cyan;
+    @include flex(column,center);
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+   
+    .logo{
+        margin-top: 50px;
+        img{
+            width: 150px;
+        }
+    }
+    ul{
+        @include flex(row, center);
+        list-style: none;
+     li{
+         margin: 30px;
+         a{
+             font-family: $ff-barlow;
+             color: $primary-color-Dark-desaturated-cyan;
+             text-decoration: none;
+             transition: all .5s ease;
+         }
+         a:hover{
+             color: white;
+         }
+     }
+    }
+    .contacts{
+        @include flex(row,center);
+        margin-bottom: 20px;
+        div{
+            margin: 15px;
+
+            svg:hover path{
+                transition: all .5s ease-in-out;
+                fill: white;
+                
+            }
+        }
+      
+        
+    }
+    .attribution{
+        font-size: 12px;
+   
+        a{
+            color: white;
+            text-decoration: none;
+            transition: all .5s ease;
+        }
+        a:hover{
+            color: rgb(255, 147, 74);
+        }
+    }
+   
+
+
+   
+}

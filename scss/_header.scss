@@ -1,0 +1,103 @@
+header{
+    background-image: url(../images/desktop/image-header.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 95vh;
+    font-family: $ff-fraunces;
+    width: 100%;
+    color: $neutral-color-White;
+    .logo img{
+        width: 150%;
+    }
+    .burger{
+        display: none;
+        cursor: pointer;
+        .line{
+            width: 30px;
+            height: 3px;
+            margin-bottom: 5px;
+            background-color: white;
+            transition: all .5s ease;
+        }
+        .line1{
+            transform: rotate(45deg)  translate(7px,-1px)
+        }
+        .line2{
+            display: none;
+        }
+        .line3{
+            transform: rotate(-45deg) translate(7px,1px);
+        }
+    }
+  
+    nav{
+        @include flex(row,space-between);
+        align-items: center;
+        padding: 40px;
+
+
+        .nav-items{
+            @include flex(row,space-between);
+            align-items: center;
+           visibility: visible;
+            
+        }
+        .nav-links{
+            list-style: none;
+            margin-right: 40px;
+            font-size: 18px;
+
+            a{
+                text-decoration: none;
+                color: inherit;
+
+            }
+            a:hover{
+                color:$primary-color-Dark-blue;
+                transition: all .5s ease;
+            }
+           
+        }
+        .btn{
+            background-color: $neutral-color-White;
+            border-radius: 25px;
+            color: $primary-color-Dark-blue;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: rgb(184, 227, 255);
+            color: $neutral-color-White;
+            transition:all .5s ease;
+        }
+    }
+    .title{
+        
+        text-align: center;
+        @include flex(column,space-between);
+        align-items: center;
+        margin-top: 120px;
+        height: 30vh;
+        width: 100%;
+        
+        
+        h1{
+            font-size: 5rem;
+           font-family: $ff-fraunces;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-align: center;
+            
+          
+        }
+        h2{
+            width: 100%;
+           text-align: center;
+        }
+        
+    }
+  
+  
+  
+}

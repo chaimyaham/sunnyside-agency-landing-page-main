@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-image: url(../images/desktop/image-header.jpg);
+  background-size: cover;
+  background-position: center center;
+  min-height: 95vh;
+  font-family: "Fraunces", serif;
+  width: 100%;
+  color: hsl(0deg, 0%, 100%);
+}
+header .logo img {
+  width: 150%;
+}
+header .burger {
+  display: none;
+  cursor: pointer;
+}
+header .burger .line {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+header .burger .line1 {
+  transform: rotate(45deg) translate(7px, -1px);
+}
+header .burger .line2 {
+  display: none;
+}
+header .burger .line3 {
+  transform: rotate(-45deg) translate(7px, 1px);
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px;
+}
+header nav .nav-items {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  visibility: visible;
+}
+header nav .nav-links {
+  list-style: none;
+  margin-right: 40px;
+  font-size: 18px;
+}
+header nav .nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+header nav .nav-links a:hover {
+  color: hsl(198deg, 62%, 26%);
+  transition: all 0.5s ease;
+}
+header nav .btn {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 25px;
+  color: hsl(198deg, 62%, 26%);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+header nav .btn:hover {
+  background-color: rgb(184, 227, 255);
+  color: hsl(0deg, 0%, 100%);
+  transition: all 0.5s ease;
+}
+header .title {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  height: 30vh;
+  width: 100%;
+}
+header .title h1 {
+  font-size: 5rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+}
+header .title h2 {
+  width: 100%;
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "transform-content yellow-pic " "pink-pic standout-content" "cerise orange-pic";
+}
+main .main-items {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 75vh;
+}
+main .yellow {
+  grid-area: yellow-pic;
+  background-image: url("../images/desktop/image-transform.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+main .transform-content {
+  grid-area: transform-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10% 24%;
+  width: 100%;
+}
+main .transform-content h1 {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: hsl(198deg, 62%, 26%);
+  font-family: "Fraunces", serif;
+}
+main .transform-content p {
+  line-height: 25px;
+  font-size: 1.2 rem;
+  color: hsl(232deg, 10%, 55%);
+}
+main .transform-content a {
+  text-decoration: none;
+  color: hsl(212deg, 27%, 19%);
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  text-shadow: 0 0 10px hsl(46deg, 87%, 75%);
+  z-index: 999;
+}
+main .transform-content a:hover {
+  text-shadow: 0 0 12px hsl(51deg, 100%, 49%);
+  transition: all 0.5s ease;
+}
+main .transform-content a::after {
+  position: absolute;
+  content: "";
+  width: 125px;
+  height: 10px;
+  background-color: hsl(46deg, 89%, 82%);
+  border-radius: 25px;
+  margin-left: -120px;
+  margin-top: 9px;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+main .transform-content a:hover::after {
+  background-color: hsl(51deg, 100%, 49%);
+}
+main .pink {
+  grid-area: pink-pic;
+  background-image: url("../images/desktop/image-stand-out.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main .standout-content {
+  grid-area: standout-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10% 24%;
+  width: 100%;
+}
+main .standout-content h1 {
+  font-size: 2.3rem;
+  font-weight: 900;
+  font-family: "Fraunces", serif;
+  color: hsl(198deg, 62%, 26%);
+}
+main .standout-content p {
+  line-height: 25px;
+  font-size: 1.2 rem;
+  color: hsl(232deg, 10%, 55%);
+}
+main .standout-content a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  text-shadow: 0 0 10px hsl(5deg, 100%, 87%);
+  z-index: 999;
+  color: hsl(212deg, 27%, 19%);
+}
+main .standout-content a:hover {
+  text-shadow: 0 0 12px hsl(7deg, 99%, 70%);
+  transition: all 0.5s ease;
+}
+main .standout-content a::after {
+  position: absolute;
+  content: "";
+  width: 125px;
+  height: 10px;
+  background-color: hsl(4deg, 79%, 73%);
+  border-radius: 25px;
+  margin-left: -120px;
+  margin-top: 9px;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+main .standout-content a:hover::after {
+  background-color: hsl(7deg, 99%, 70%);
+}
+main .cerise {
+  grid-area: cerise;
+  background-image: url("../images/desktop/image-graphic-design.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  padding: 60px;
+  align-items: center;
+}
+main .cerise h1 {
+  font-family: "Fraunces", serif;
+  margin-bottom: 20px;
+  color: hsl(167deg, 40%, 24%);
+}
+main .cerise p {
+  text-align: center;
+  padding: 0 60px;
+  font-family: "Barlow", sans-serif;
+  color: hsl(167deg, 40%, 24%);
+}
+main .orange {
+  grid-area: orange-pic;
+  background-image: url("../images/desktop/image-photography.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  padding: 62px;
+  align-items: center;
+}
+main .orange h1 {
+  font-family: "Fraunces", serif;
+  margin-bottom: 20px;
+  color: hsl(212deg, 27%, 19%);
+}
+main .orange p {
+  text-align: center;
+  padding: 0 72px;
+  font-family: "Barlow", sans-serif;
+  color: hsl(212deg, 27%, 19%);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px;
+}
+section h1 {
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  color: hsl(210deg, 4%, 67%);
+  margin: 40px;
+}
+section .clients {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 40px 80px;
+}
+section .clients .client {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+section .clients .client .emily, section .clients .client .jennie, section .clients .client .thomas {
+  background-image: url("../images/image-emily.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+section .clients .client .emily:hover, section .clients .client .jennie:hover, section .clients .client .thomas:hover {
+  transform: scale(1.1);
+}
+section .clients .client .thomas {
+  background-image: url("../images/image-thomas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+section .clients .client .jennie {
+  background-image: url("../images/image-jennie.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+section .clients .client p {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+  margin: 20px 10px;
+  font-weight: 400;
+  line-height: 20px;
+  color: hsl(232deg, 10%, 55%);
+}
+section .clients .client h2 {
+  font-family: "Fraunces", serif;
+  font-size: 19px;
+  margin: 10px;
+}
+section .clients .client h3 {
+  font-family: "Barlow", sans-serif;
+  color: hsl(210deg, 4%, 67%);
+  font-size: 16px;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "milk orange-pic cone sucre";
+  width: 100%;
+  margin-bottom: 0;
+}
+article .milk {
+  grid-area: milk;
+  background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 60vh;
+}
+article .orange {
+  grid-area: orange-pic;
+  background-image: url("../images/desktop/image-gallery-orange.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+article .cone {
+  grid-area: cone;
+  background-image: url("../images/desktop/image-gallery-cone.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+article .sucre {
+  grid-area: sucre;
+  background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+footer {
+  background-color: hsl(168deg, 34%, 41%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+footer .logo {
+  margin-top: 50px;
+}
+footer .logo img {
+  width: 150px;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  list-style: none;
+}
+footer ul li {
+  margin: 30px;
+}
+footer ul li a {
+  font-family: "Barlow", sans-serif;
+  color: hsl(167deg, 40%, 24%);
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+footer ul li a:hover {
+  color: white;
+}
+footer .contacts {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+footer .contacts div {
+  margin: 15px;
+}
+footer .contacts div svg:hover path {
+  transition: all 0.5s ease-in-out;
+  fill: white;
+}
+footer .attribution {
+  font-size: 12px;
+}
+footer .attribution a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+footer .attribution a:hover {
+  color: rgb(255, 147, 74);
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+  header .logo img {
+    width: 120%;
+  }
+  header nav {
+    justify-content: space-between;
+  }
+  header nav .nav-items {
+    position: absolute;
+    background-color: hsl(0deg, 0%, 100%);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    top: 20%;
+    width: 80%;
+    height: 60vh;
+    color: hsl(198deg, 62%, 26%);
+    transform: translateX(-200%);
+  }
+  header nav .nav-items li {
+    margin-right: 0;
+  }
+  header nav .nav-items li a {
+    text-align: center;
+    color: hsl(213deg, 9%, 39%);
+  }
+  header nav .nav-items .btn {
+    background-color: yellow;
+  }
+  header nav .nav-items::before {
+    content: "";
+    align-self: end;
+    margin-top: -70px;
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid hsl(0deg, 0%, 100%);
+    border-right: 0px solid hsl(0deg, 0%, 100%);
+  }
+  @-webkit-keyframes menu {
+    0% {
+      transform: translateY(-100%) translateX(-200%) rotate(180deg);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) translateX(0) rotate(0deg);
+    }
+  }
+  @keyframes menu {
+    0% {
+      transform: translateY(-100%) translateX(-200%) rotate(180deg);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) translateX(0) rotate(0deg);
+    }
+  }
+  header .burger {
+    display: block;
+  }
+  header .title h1 {
+    font-size: 2.75rem;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main .transform-content, main .standout-content {
+    padding: 15px;
+  }
+  main .transform-content h1, main .standout-content h1 {
+    text-align: center;
+  }
+  main .transform-content p, main .standout-content p {
+    text-align: center;
+  }
+  main .transform-content a, main .standout-content a {
+    text-align: center;
+  }
+  main .cerise, main .orange {
+    padding: 20px;
+  }
+  main .cerise p, main .orange p {
+    padding: 15px;
+  }
+  section {
+    padding: 10px;
+  }
+  section .clients {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+  section .clients .client {
+    margin-top: 40px;
+  }
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "milk orange-pic" "cone sucre";
+  }
+  article .milk {
+    height: 40vh;
+  }
+}/*# sourceMappingURL=style.css.map */

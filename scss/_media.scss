@@ -1,0 +1,125 @@
+@media screen and (max-width:900px) {
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        .logo img{
+            width: 120%;
+        }
+        nav 
+        {
+            justify-content: space-between;
+            
+        .nav-items{
+           
+            
+            position: absolute;
+            background-color: $neutral-color-White;
+            @include flex(column,space-around);
+            align-items: center;
+            top: 20%;
+            width: 80%;
+            height: 60vh;
+            color:$primary-color-Dark-blue;
+            transform: translateX(-200%);
+            
+           
+            
+           
+            
+
+            li{
+                margin-right: 0;
+                a{
+                    text-align: center;
+                    color: $neutral-color-Very-dark-grayish-blue;
+                }
+            }
+            .btn{
+                background-color: yellow;
+              
+            }
+
+            
+        }
+        .nav-items::before{
+            content: "";
+            align-self: end;
+            margin-top: -70px;
+            border-left: 100px solid transparent;
+            border-bottom: 100px solid $neutral-color-White;
+            border-right: 0px solid $neutral-color-White ;
+         
+        }
+        @keyframes menu {
+            0%{
+                transform: translateY(-100%) translateX(-200%) rotate(180deg);
+                opacity: 0;
+
+            }
+            100%{
+                opacity: 1;
+                transform:translateY(0) translateX(0) rotate(0deg);
+            }
+            
+        }
+
+        }
+        .burger{
+            display: block;
+        }
+        .title{
+            h1{
+                font-size: 2.75rem;
+            }
+            
+        }
+    }
+    main{
+        @include flex(column,center);
+
+        .transform-content, .standout-content{
+            padding: 15px;
+            h1{
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+            a{
+                text-align: center;
+            }
+        }
+        .cerise,.orange{
+            padding: 20px;
+            p{
+                padding: 15px;
+            }
+        }
+    }
+    section{
+        padding: 10px;
+        .clients{
+            @include flex(column,center);
+            padding: 10px;
+
+            .client{
+                margin-top:40px;
+               
+            }
+        }
+    }
+    article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "milk orange-pic"
+        "cone sucre"
+        ;
+        .milk{
+            height: 40vh;
+        }
+
+    }
+ 
+}
